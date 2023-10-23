@@ -1,15 +1,17 @@
 plugins {
+    id("com.android.library")
     id("kotlin-android")
     id("org.jetbrains.kotlin.android")
+    id("dagger.hilt.android.plugin")
     id("com.google.devtools.ksp")
     id("org.jetbrains.kotlin.plugin.serialization")
 }
 
-//kotlin {
-//    sourceSets.all {
-//        kotlin.srcDir("build/generated/ksp/$name/kotlin")
-//    }
-//}
+kotlin {
+    sourceSets.all {
+        kotlin.srcDir("build/generated/ksp/$name/kotlin")
+    }
+}
 
 android {
     // Kotlin
@@ -19,7 +21,7 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = libs.versions.java.target.get()
     }
 
     // Android
@@ -42,6 +44,9 @@ dependencies {
     implementation(libs.bundles.kotlin)
     implementation(catalog.bundle("kotlin-android"))
     implementation(libs.timber)
+
+    implementation(libs.bundles.hilt)
+    ksp(catalog.library("hilt-compiler"))
 
     implementation(catalog.library("kotlinx-serialization-json"))
 

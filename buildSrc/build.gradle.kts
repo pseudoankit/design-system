@@ -16,9 +16,13 @@ repositories {
 dependencies {
     implementation(libs.android.gradle.plugin)
     implementation(libs.kotlin.gradle.plugin)
+    implementation(libs.hilt.gradle.plugin)
+    implementation(libs.google.services.plugin)
+    implementation(libs.firebase.crashlytics.gradle.plugin)
     implementation(libs.detekt.gradle.plugin)
     implementation(libs.kotlinx.serialization.plugin)
     implementation(libs.ksp.plugin)
+    implementation(libs.cashapp.molecule.plugin)
 
 
     // Make version catalog available in precompiled scripts

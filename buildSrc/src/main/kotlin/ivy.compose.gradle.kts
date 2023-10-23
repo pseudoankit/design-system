@@ -1,5 +1,6 @@
 plugins {
     id("ivy.module")
+    id("app.cash.molecule")
 }
 
 android {
