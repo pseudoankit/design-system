@@ -1,3 +1,3 @@
 object Plugins {
-    const val library = "ivy.compose"
+    const val module = "module"
 }
