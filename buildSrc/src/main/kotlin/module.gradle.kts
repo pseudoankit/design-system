@@ -31,5 +31,6 @@ android {
 
 dependencies {
     implementation(libs.bundles.compose)
+    implementation(libs.kotlinx.collections.immutable)
     lintChecks(libs.slack.lint.compose)
 }
