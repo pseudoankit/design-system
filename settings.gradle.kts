@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "design-system"
 include(":app")
- 
+include(":carousel")
