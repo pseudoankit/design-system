@@ -26,7 +26,8 @@ fun <T> UnifyCarousel(
     items: ImmutableList<T>,
     modifier: Modifier = Modifier,
     selectedIndex: Int = 0,
-    maxVisibleIndicators: Int = 5,
+    fullVisibleIndicators: Int = 5,
+    halfVisibleIndicators: Int = 2,
     content: @Composable (T) -> Unit
 ) {
     val pagerState = rememberPagerState(
@@ -51,8 +52,9 @@ fun <T> UnifyCarousel(
         UnifyIndicator(
             type = UnifyIndicatorType.Dots,
             selectedIndex = pagerState.currentPage,
-            maxVisibleIndicator = maxVisibleIndicators,
-            itemsCount = items.size
+            fullVisibleIndicators = fullVisibleIndicators,
+            itemsCount = items.size,
+            halfVisibleIndicators = halfVisibleIndicators
         )
     }
 }

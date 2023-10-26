@@ -15,7 +15,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.core.R
-import kotlinx.collections.immutable.persistentListOf
+import kotlinx.collections.immutable.toImmutableList
 
 @Preview
 @Composable
@@ -25,7 +25,7 @@ fun UnifyCarouselDemo() {
         contentAlignment = Alignment.Center
     ) {
         UnifyCarousel(
-            items = persistentListOf("hey", "hi", "hlw")
+            items = (1..10).map { "f" }.toImmutableList()
         ) {
             Column(
                 modifier = Modifier
