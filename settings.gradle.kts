@@ -17,3 +17,4 @@ rootProject.name = "design-system"
 include(":app")
 include(":carousel")
 include(":bottle")
+include(":core")

@@ -6,6 +6,7 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.DrawScope
+import com.pseudoankit.core.util.buildPath
 
 private const val capHeightFraction = .12f
 
@@ -31,12 +32,11 @@ internal fun DrawScope.drawWaterPath(
     val height = size.height
 
     val waterWaves = (1 - waterWavesPercentage) * height
-    val path = Path().apply {
+    val path = buildPath {
         moveTo(0f, waterWaves)
         lineTo(width, waterWaves)
         lineTo(width, height)
         lineTo(0f, height)
-        close()
     }
 
     drawPath(
@@ -49,7 +49,7 @@ internal fun DrawScope.bottlePath(): Path {
     val width = size.width
     val height = size.height
 
-    return Path().apply {
+    return buildPath {
         moveTo(
             x = width.times(.3f), y = height.times(.1f)
         )
@@ -84,6 +84,5 @@ internal fun DrawScope.bottlePath(): Path {
         lineTo(
             x = width.times(.7f), y = height.times(.1f)
         )
-        close()
     }
 }
