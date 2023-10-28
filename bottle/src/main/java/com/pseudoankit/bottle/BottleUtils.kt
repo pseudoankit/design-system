@@ -57,8 +57,8 @@ internal fun DrawScope.bottlePath(): Path {
             x = width.times(.3f), y = height.times(.2f)
         )
         quadraticBezierTo(
-            x1 = 0f, y1 = height.times(.3f),
-            x2 = 0f, y2 = height.times(.4f),
+            x1 = 0f, y1 = height.times(.25f),
+            x2 = 0f, y2 = height.times(.45f),
         )
         lineTo(
             x = 0f, y = height.times(.95f)
@@ -78,7 +78,7 @@ internal fun DrawScope.bottlePath(): Path {
             x = width, y = height.times(.4f)
         )
         quadraticBezierTo(
-            x1 = width, y1 = height.times(.3f),
+            x1 = width, y1 = height.times(.25f),
             x2 = width.times(.7f), y2 = height.times(.2f),
         )
         lineTo(
