@@ -53,6 +53,7 @@ dependencies {
     implementation(project(":carousel"))
     implementation(project(":font-awesome-icon"))
     implementation(project(":bottle"))
+    implementation(project(":swipe"))
 
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")

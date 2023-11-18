@@ -25,6 +25,7 @@
             <option value="$PROJECT_DIR$/carousel" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/font-awesome-icon" />
+            <option value="$PROJECT_DIR$/swipe" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
