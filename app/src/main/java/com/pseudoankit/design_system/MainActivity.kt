@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import com.pseudoankit.bottle.UnifyBottlePreview
 import com.pseudoankit.design_system.ui.theme.DesignsystemTheme
 import com.pseudoankit.icon.FontAwesomeIconDemo
+import com.pseudoankit.swipe.SwipeableCardPreview
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +28,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     FontAwesomeIconDemo()
                     UnifyBottlePreview()
+                    SwipeableCardPreview()
                 }
             }
         }
